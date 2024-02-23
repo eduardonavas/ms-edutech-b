@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ms-edutech-b
+
+server:
+  servlet:
+    context-path: /msEdutechB/v1

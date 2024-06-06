@@ -9,6 +9,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class CustomException {
 
+
+    @ExceptionHandler(BillIdExistException.class)
+    public ResponseEntity<CustomError> excep(BillIdExistException e){
+        var error = CustomError.builder().status(HttpStatus.FORBIDDEN.value()).message(e.getMessage()).build();
+
+        return ResponseEntity.status(error.getStatus()).body(error);
+    }
+
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<CustomError> excep(RuntimeException e){
         var error = CustomError.builder().status(HttpStatus.INTERNAL_SERVER_ERROR.value()).message(e.getMessage()).build();

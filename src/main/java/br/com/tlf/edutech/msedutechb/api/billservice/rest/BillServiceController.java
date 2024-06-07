@@ -18,6 +18,6 @@ public class BillServiceController implements BillServiceApi{
 
     @Override
     public void deleteIds() {
-
+        billServiceUseCase.cleanIds();
     }
 }

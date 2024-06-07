@@ -6,3 +6,5 @@ server:
   port: 8089
   servlet:
     context-path: /msEdutechB/v1
+
+wait: 0

@@ -15,4 +15,9 @@ public class BillServiceController implements BillServiceApi{
     public void file(BillDTO billDTO) {
         billServiceUseCase.processBill(billDTO);
     }
+
+    @Override
+    public void deleteIds() {
+
+    }
 }

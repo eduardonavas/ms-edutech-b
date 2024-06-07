@@ -9,4 +9,6 @@ public interface ClienteApi {
 
     @PostMapping("/cad")
     ResponseCliente cad(@RequestBody  RequestCliente requestCliente);
+
+
 }

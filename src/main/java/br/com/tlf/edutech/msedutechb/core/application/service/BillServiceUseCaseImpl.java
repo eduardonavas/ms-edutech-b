@@ -20,4 +20,9 @@ public class BillServiceUseCaseImpl implements BillServiceUseCase {
             throw new BillIdExistException(String.format("Bill Id: %s exists", billDTO.getId()));
         }
     }
+
+    @Override
+    public void cleanIds() {
+        billIdRepoCache.removeAll(billIdRepoCache);
+    }
 }

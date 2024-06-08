@@ -13,7 +13,7 @@ import java.util.Set;
 @Service
 public class BillServiceUseCaseImpl implements BillServiceUseCase {
 
-    private static Set<String> billIdRepoCache;
+    private static Set<String> billIdRepoCache = new HashSet<>();
 
     @Value("${wait}")
     private long wait;
